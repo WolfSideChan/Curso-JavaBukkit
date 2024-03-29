@@ -1,0 +1,7 @@
+  name: Projeto
+  main: pt.bernardo.Main
+  version: 1.0
+  commands:
+    ajuda:
+      description: Um comando de ajuda
+    entidade:
