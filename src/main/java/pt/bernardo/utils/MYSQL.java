@@ -78,9 +78,7 @@ public class MYSQL {
     }
 
     private void criarTabelas() {
-        criarTabela("PlayerGeneral", "nome varchar(16), kills smallint, mortes smallint, level smallint, classe varchar(32), raca varchar(32), reino varchar(20), cargo varchar(16), rank varchar(20), tempo int, ultima varchar(32), pedido varchar(32), desbugar varchar(32)");
-        criarTabela("Backpacks", "id varchar(6), backpack tinytext, contents longtext");
-        criarTabela("ReinoTop", "nome varchar(16), invasoes smallint, invadido smallint");
+        criarTabela("informacoes", "nome varchar(16), blocos int");
     }
 
 }

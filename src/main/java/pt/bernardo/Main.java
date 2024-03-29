@@ -7,8 +7,12 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import pt.bernardo.listeners.Inventory;
 import pt.bernardo.listeners.NPCEvents;
+import pt.bernardo.managers.PlayerBlockManagers;
+import pt.bernardo.utils.MYSQL;
 
 public class Main extends JavaPlugin {
+
+    private static MYSQL mysql;
 
     @Override
     public void onEnable() {
@@ -17,11 +21,17 @@ public class Main extends JavaPlugin {
         registerEvents();
         registerCommands();
         //startScheduler();
+        mysql = new MYSQL("root", "vertrigo", "localhost", 3306, "aula");
+        PlayerBlockManagers.insert();
     }
 
     private void loadConfig() {
         getConfig().options().copyDefaults(false);
         saveDefaultConfig();
+    }
+
+    public static MYSQL getMySQL() {
+        return mysql;
     }
 
     private void registerEvents() {
