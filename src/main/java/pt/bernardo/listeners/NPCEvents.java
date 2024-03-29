@@ -19,6 +19,7 @@ public class NPCEvents implements Listener {
         e.setCancelled(true);
         Inventory inv = new WelcomeInventory().getInv();
         p.openInventory(inv);
+        System.out.println("Codigo atualizado");
     }
 
 }
