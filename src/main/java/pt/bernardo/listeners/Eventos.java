@@ -13,12 +13,6 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.server.ServerListPingEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-import pt.bernardo.Main;
-import pt.bernardo.entities.WelcomeInventory;
-import pt.bernardo.items.ItemBuilder;
-import pt.bernardo.items.SkullBuilder;
 import pt.bernardo.utils.Item;
 
 public class Eventos implements Listener {

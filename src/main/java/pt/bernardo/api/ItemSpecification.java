@@ -1,4 +1,4 @@
-package pt.bernardo.items;
+package pt.bernardo.api;
 
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;

@@ -27,7 +27,7 @@ public class PlayerBlockManagers {
 
 
             for (PlayerBlock pb: list) {
-                ps = connection.prepareStatement("INSERT INTO informacoes VALUES ('"+pb.getNome()+"',''"+pb.getQuantidade()+")");
+                ps = connection.prepareStatement("INSERT INTO informacoes VALUES ('"+pb.getNome()+"','"+pb.getQuantidade()+"')");
                 ps.execute();
             }
             ps.close();

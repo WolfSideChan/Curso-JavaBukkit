@@ -1,4 +1,4 @@
-package pt.bernardo.items;
+package pt.bernardo.api;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
