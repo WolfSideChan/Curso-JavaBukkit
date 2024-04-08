@@ -1,21 +1,24 @@
 package pt.bernardo;
 
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.java.JavaPlugin;
 import pt.bernardo.commands.Ajuda;
 import pt.bernardo.commands.Entidades;
 import pt.bernardo.listeners.Eventos;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.java.JavaPlugin;
 import pt.bernardo.listeners.Inventory;
 import pt.bernardo.listeners.NPCEvents;
 import pt.bernardo.managers.PlayerBlockManagers;
 import pt.bernardo.utils.MYSQL;
 
+
 public class Main extends JavaPlugin {
 
+    public static Main instance;
     private static MYSQL mysql;
 
     @Override
     public void onEnable() {
+        instance = this;
         Bukkit.getConsoleSender().sendMessage(getConfig().getString("Mensagem").replace("&", "§"));
         loadConfig();
         registerEvents();
@@ -55,4 +58,9 @@ public class Main extends JavaPlugin {
         }, 0, 20 * 5);
     }*/
 
+    public Main getInstance() {
+        return instance;
+    }
+
 }
+
